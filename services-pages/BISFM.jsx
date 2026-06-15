@@ -9,6 +9,7 @@ import {
   BreadcrumbPage,
 } from "@/components/ui/breadcrumb";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useRef, useMemo, useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
@@ -24,6 +25,7 @@ import {
 import { Check, SlashIcon } from "lucide-react";
 import ServicesRightSideContentEng from "@/components/manual/ServicesRightSideContent/ServicesRightSideContentEng";
 import ServiceAuthorEng from "@/components/manual/ServiceAuthor/ServiceAuthorEng";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 function BISFM() {
   return (
@@ -32,6 +34,8 @@ function BISFM() {
       <HeroSection />
       <IndexSection />
       <MainContent />
+      <ServiceFaq />
+      <LanguageSelector />
     </div>
   );
 }
@@ -1751,6 +1755,289 @@ const FacilitatorSection = () => {
         They act as your strategic partner, often doubling as your Authorized
         Indian Representative (AIR).
       </p>
+    </div>
+  );
+};
+
+
+const ServiceFaq = () => {
+  const faqs = [
+    {
+      question:
+        "What is BIS certification and why is it important for foreign manufacturers to obtain Indian BIS?",
+      answer:
+        "BIS certification is a regulatory process conducted by the Bureau of Indian Standards to ensure products meet Indian standards. It is essential for foreign manufacturers to gain market access, customs clearance, and consumer trust in India.",
+    },
+    {
+      question: "What does the ISI mark represent?",
+      answer:
+        "The ISI mark indicates conformity to a specific Indian Standard. It is mandatory for products under the BIS certification and must be printed on packaging and products.",
+    },
+    {
+      question: "Is BIS certification mandatory for all imports to India?",
+      answer:
+        "No. BIS certification is mandatory for products listed under the mandatory Indian BIS certification scheme. However, voluntary certification is available for other products.",
+    },
+    {
+      question: "Who can apply for BIS certification under FMCS?",
+      answer:
+        "Only actual foreign manufacturers (not importers or traders) can apply. An Authorized Indian Representative (AIR) is mandatory to represent them in India.",
+    },
+    {
+      question: "How long does it take to get a BIS certificate?",
+      answer:
+        "The average BIS certification process under FMCS takes 120 days, depending on document readiness, audit scheduling, and testing turnaround times.",
+    },
+    {
+      question: "What are the major costs involved in BIS certification?",
+      answer:
+        "Costs include application fees, audit charges, lab testing fees, license and marking fees, and a Performance Bank Guarantee (PBG) from an RBI-approved Indian bank.",
+    },
+    {
+      question: "Can the BIS license be renewed?",
+      answer:
+        "Yes. The BIS license is generally valid for 1–2 years and can be renewed upon meeting compliance and document update requirements.",
+    },
+    {
+      question: "What happens if the product fails during BIS lab testing?",
+      answer:
+        "If a product fails, BIS may allow corrective action and re-testing. Persistent failure can result in rejection of the application.",
+    },
+    {
+      question: "Is it necessary to hire a BIS certification consultant?",
+      answer:
+        "It's not mandatory but highly recommended. A consultant helps reduce delays, manage compliance, and improve approval chances by ensuring full alignment with BIS protocols.",
+    },
+    {
+      question: "Can a BIS license be suspended or cancelled?",
+      answer:
+        "Yes. BIS may suspend or cancel a license for non-compliance, product failure, misuse of the ISI logo, or audit discrepancies.",
+    },
+    {
+      question: "What documents are needed for the BIS certification process?",
+      answer:
+        "Documents include the FMCS application form, test reports, equipment lists, calibration certificates, factory layout, AIR appointment letter, and proof of fee payment.",
+    },
+    {
+      question: "Can one AIR represent multiple BIS applications?",
+      answer:
+        "Yes, provided they are authorized for each project and have the bandwidth to handle documentation, audits, and communication for each certification.",
+    },
+    {
+      question: "What is the role of a Performance Bank Guarantee?",
+      answer:
+        "A PBG assures BIS that the manufacturer will comply with Indian standards. It is refundable upon license cancellation and mandatory for all FMCS applications obtaining Indian BIS.",
+    },
+    {
+      question: "Is BIS certification recognized outside India?",
+      answer:
+        "While the BIS certificate is an Indian standard, it is respected in trade contexts in many regions that accept Indian compliance, especially in Asia and Africa.",
+    },
+    {
+      question: "How do I know if my product requires BIS certification?",
+      answer:
+        "Check the updated list on the official BIS website or consult with a BIS consultant to verify whether your product falls under mandatory certification.",
+    },
+  ];
+
+  return (
+    <section
+      id="faqs"
+      className="my-2  scroll-mt-20"
+      aria-label="Frequently Asked Questions"
+    >
+      <div className="max-w-[88rem] mx-auto px-4 py-8 md:p-12">
+        <h2 className="text-[32px] md:text-[48px] text-center font-geist font-semibold text-[#181818]">
+          Frequently Asked Questions
+        </h2>
+        <p className="text-[#52525b] text-center text-[16px] md:text-[20px] font-geist">
+          Can't find the answer you are looking for?{" "}
+          <a
+            href="/contact"
+            className="text-[#27272a] font-geist text-[20px] font-medium underline underline-offset-4 hover:text-[#1A8781] transition-colors"
+          >
+            Reach out to us!
+          </a>
+        </p>
+
+        <div className="w-full max-w-[1104px] mt-[16px] md:mt-[24px] mx-auto">
+          <Accordion type="single" collapsible className="w-full">
+            {faqs.map((faq, index) => (
+              <AccordionItem key={index} value={`item-${index + 1}`}>
+                <AccordionTrigger className="font-geist text-[16px] md:text-[18px] text-[#3f3f46] font-medium">
+                  <div className="flex-1 text-left">
+                    <span className="mr-2 font-semibold">{index + 1}.</span>
+                    {faq.question}
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="font-geist text-[14px] md:text-[18px] text-[#5e5f6e]">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+
+const LanguageSelector = () => {
+  const currentPath = usePathname();
+
+  // Helper function to get country name from flag URL
+  const getCountryName = (flagUrl) => {
+    const countryMap = {
+      cn: "China",
+      de: "Germany",
+      nl: "Netherlands",
+      jp: "Japan",
+      kr: "South Korea",
+      fr: "France",
+      es: "Spain",
+      th: "Thailand",
+      id: "Indonesia",
+      it: "Italy",
+      sa: "Saudi Arabia",
+      vn: "Vietnam",
+      gb: "United Kingdom",
+    };
+    // Extract country code from URL (e.g., "cn" from "https://flagcdn.com/w320/cn.png")
+    const match = flagUrl.match(/\/([a-z]{2})\.png$/);
+    const countryCode = match ? match[1] : null;
+    return countryMap[countryCode] || "Flag";
+  };
+
+  const languages = [
+    // {
+    //   code: "en",
+    //   name: "English",
+    //   flag: "https://flagcdn.com/w320/gb.png",
+    //   path: "/a-guide-to-bis-certification-for-foreign-manufacturers-indian-bis",
+    // },
+    {
+      code: "zh",
+      name: "Chinese",
+      flag: "https://flagcdn.com/w320/cn.png",
+      path: "/zh/wai-guo-sheng-chan-shang-yin-du-bis-ren-zheng-zhi-nan",
+    },
+    {
+      code: "de",
+      name: "German",
+      flag: "https://flagcdn.com/w320/de.png",
+      path: "/de/leitfaden-zur-bis-zertifizierung-fuer-auslaendische-hersteller-indisches-bis",
+    },
+    {
+      code: "nl",
+      name: "Dutch",
+      flag: "https://flagcdn.com/w320/nl.png",
+      path: "/nl/gids-voor-bis-certificering-voor-buitenlandse-fabrikanten-indiaas-bis",
+    },
+    {
+      code: "ja",
+      name: "Japanese",
+      flag: "https://flagcdn.com/w320/jp.png",
+      path: "/ja/bis-nintei-gaikoku-seizousha-no-tame-no-gaido-india-no-bis",
+    },
+    {
+      code: "ko",
+      name: "Korean",
+      flag: "https://flagcdn.com/w320/kr.png",
+      path: "/ko/indo-bis-waeoe-jejo-eopeul-wihan-bis-injeung-gaideu",
+    },
+    {
+      code: "fr",
+      name: "French",
+      flag: "https://flagcdn.com/w320/fr.png",
+      path: "/fr/guide-certification-bis-pour-fabricants-etrangers-bis-inde",
+    },
+    {
+      code: "es",
+      name: "Spanish",
+      flag: "https://flagcdn.com/w320/es.png",
+      path: "/es/guia-certificacion-bis-para-fabricantes-extranjeros-bis-indio",
+    },
+    {
+      code: "th",
+      name: "Thai",
+      flag: "https://flagcdn.com/w320/th.png",
+      path: "/th/khumanam-kanraprong-bis-samrab-puuphlit-thangchat-bis-india",
+    },
+    {
+      code: "id",
+      name: "Indonesian",
+      flag: "https://flagcdn.com/w320/id.png",
+      path: "/id/panduan-sertifikasi-bis-untuk-produsen-asing-bis-india",
+    },
+    {
+      code: "it",
+      name: "Italian",
+      flag: "https://flagcdn.com/w320/it.png",
+      path: "/it/guida-alla-certificazione-bis-per-produttori-stranieri-bis-indiano",
+    },
+    {
+      code: "ar",
+      name: "Arabic",
+      flag: "https://flagcdn.com/w320/sa.png",
+      path: "/ar/dalil-shahadat-bis-lilmusanein-alajnabiyin-bis-alhind",
+    },
+    {
+      code: "vi",
+      name: "Vietnamese",
+      flag: "https://flagcdn.com/w320/vn.png",
+      path: "/vi/huong-dan-chung-nhan-bis-cho-nha-san-xuat-nuoc-ngoai-bis-an-do",
+    },
+  ];
+
+  const currentLanguage = languages.find((lang) => lang.path === currentPath);
+
+  return (
+    <div className=" bg-white">
+      <div className="max-w-[88rem] mx-auto px-4 py-8 md:p-12">
+        <div className="flex flex-col items-center gap-6 md:gap-8">
+          {/* Heading */}
+          <div className="flex flex-col items-center">
+            <p className="text-[#52525b] text-center text-[16px] md:text-[20px] font-geist">
+              View This Page in Your Language
+            </p>
+          </div>
+
+          {/* Language Flags Grid */}
+          <div className="w-full max-w-[1400px]">
+            <div className="flex flex-wrap justify-center items-center gap-3 md:gap-4">
+              {languages.map((language) => {
+                const isActive = currentPath === language.path;
+                return (
+                  <Link
+                    key={language.code}
+                    href={language.path}
+                    className="group relative flex flex-col items-center justify-center transition-all duration-300"
+                  >
+                    {/* Flag */}
+                    <div
+                      className={`w-[42px] h-[28px] md:w-[64px] md:h-[42px] transition-transform duration-300 flex items-center justify-center ${
+                        isActive ? "scale-110" : "group-hover:scale-110"
+                      }`}
+                    >
+                      <img
+                        src={language.flag}
+                        alt={`${getCountryName(language.flag)} Flag`}
+                        title={`${getCountryName(language.flag)} Flag`}
+                        className="w-full h-full object-cover rounded-sm border border-neutral-500"
+                      />
+                    </div>
+                    {/* Active Indicator */}
+                    {isActive && (
+                      <div className="absolute -top-1 -right-1 w-3 h-3 bg-[#1A8781] rounded-full border-2 border-white"></div>
+                    )}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
