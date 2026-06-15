@@ -1,8 +1,10 @@
+import Hero from "@/home-page-sections/Hero";
+
 export default function Home() {
   return (
     <div>
-      {/* <Hero />
-      <LogoTicker />
+      <Hero />
+      {/*      <LogoTicker />
       <OurServices />
       <AuditsMarquee />
       <Contact />
