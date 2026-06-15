@@ -1,49 +1,642 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.shadow-input {
+  @apply shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)];
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.service-left-content-heading-two {
+  @apply text-[28px] md:text-[40px] font-roboto font-bold text-[#131316] leading-none md:leading-[1.1] my-3 md:my-0;
+}
+
+.service-left-content-heading-three {
+  @apply mt-[12px] md:mt-[16px] font-semibold font-geist text-[16px] md:text-[20px] text-[#131316];
+}
+
+.service-left-content-paragraph {
+  @apply mt-[16px] md:mt-[18px] font-geist text-sm md:text-lg text-[#42434d] tracking-wide text-left max-w-full leading-loose;
+}
+
+.service-left-content-separator {
+  @apply w-[94.46px] h-[1.5px] bg-gray-700;
+}
+
+.service-left-content-index-heading {
+  @apply uppercase font-semibold font-geist text-[14px] md:text-[20px] text-gray-700;
+}
+
+.service-left-content-divider {
+  @apply h-px w-full bg-gradient-to-r from-transparent via-gray-500 to-transparent;
+}
+
+.mainHeading {
+  @apply text-[28px] md:text-[40px] font-roboto font-bold text-[#131316] leading-none md:leading-[1.1] my-3 md:my-0;
+}
+
+.normalHeading {
+  @apply mt-[12px] md:mt-[16px] font-semibold font-geist text-[16px] md:text-[20px] text-[#131316];
+}
+
+.simpleParagraph {
+  @apply mt-[16px] md:mt-[16px] font-geist text-sm md:text-lg text-[#42434d] tracking-wide text-left max-w-full leading-loose;
+}
+
+.pointList {
+  @apply flex flex-col md:flex-row gap-6 md:gap-10;
+}
+
+.boxshadowbtn {
+  padding: 12px;
+  width: 100%;
+  margin: auto;
+  box-shadow: 10px 10px #a2a5b8;
+  border: 2px solid #a2a5b8 !important;
+  transition: all ease-in 0.2s !important;
+}
+
+@media (max-width: 768px) {
+  .boxshadowbtn {
+    width: 100%;
   }
 }
 
-html {
-  height: 100%;
+.boxshadowbtn:hover {
+  box-shadow: none;
+  transform: translateY(4px) !important;
+  transition: all ease-in 0.2s;
+  opacity: 1 !important;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+.custom-radial-gradient {
+  background: radial-gradient(circle, #ebf3f5 7%, #c5e2f0 100%);
 }
 
-body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.custom-radial-gradient-cdsco {
+  background: radial-gradient(circle, #d8e6ef 8%, #ecedef 100%);
 }
 
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  scrollbar-width: auto;
+  scrollbar-color: #afb2bf;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 3px;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+*::-webkit-scrollbar-track {
+  background: #000814;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #afb2bf;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+*:active::-webkit-scrollbar-thumb,
+*:focus::-webkit-scrollbar-thumb,
+*:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+.filter-container::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-container {
+  -ms-overflow-style: none;
+  /* For Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* For Firefox */
+}
+
+/* Hide scrollbar utility class */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* For Internet Explorer 10+ */
+  scrollbar-width: none;
+  /* For Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.transition-transform {
+  transition: transform 0.3s ease-out;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
   }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+  /* Reduce CLS from Geist font swaps by aligning fallback metrics */
+  .font-geist {
+    font-size-adjust: 0.5;
+  }
+}
+
+.client-logo-container {
+  --s: 20px;
+  --b: 2px;
+  --w: 250px;
+  --c: #668284;
+  --g: var(--c) var(--b), #0000 0 calc(100% - var(--b)), var(--c) 0;
+
+  width: var(--w);
+  height: var(--w);
+  position: relative;
+  background: #fff;
+  padding: calc(2 * var(--s));
+  background: linear-gradient(var(--g)) 50%/100% calc(100% - 2 * var(--s))
+      no-repeat,
+    linear-gradient(90deg, var(--g)) 50% / calc(100% - 2 * var(--s)) 100%
+      no-repeat;
+  outline: var(--b) solid var(--c);
+  outline-offset: calc(var(--s) / -2);
+  transition: 0.5s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.client-logo-container:hover {
+  outline: calc(var(--w) / 2) solid rgb(229, 231, 235);
+  outline-offset: calc(var(--w) / -2 - 2 * var(--s));
+  background: linear-gradient(var(--g)) 50%/100% 100% no-repeat,
+    linear-gradient(90deg, var(--g)) 50%/100% 100% no-repeat;
+}
+
+.client-logo-container img {
+  position: relative;
+  z-index: 10;
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.client-logo-container:hover img {
+  transform: scale(1.2);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+  box-shadow: 0 0 0 1000px #fff inset !important;
+  -webkit-text-fill-color: #7e7e7e !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Phone Input - React Tel Input Styles */
+.react-tel-input .form-control {
+  @apply w-full h-[72px] text-[17px] text-[#7E7E7E] font-poppins font-semibold rounded-xl border border-blue-500/90 px-4;
+}
+
+.react-tel-input .flag-dropdown {
+  @apply border border-blue-500/90 rounded-l-xl;
+}
+
+.react-tel-input .selected-flag {
+  @apply rounded-l-xl;
+  background-color: transparent !important;
+}
+
+/* Custom scrollbar styles for sitemap cards */
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db #f3f4f6;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 3px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 3px;
+  transition: background-color 0.2s ease;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background-color: #9ca3af;
+}
+
+/* Hide scrollbar for better aesthetics on mobile */
+@media (max-width: 768px) {
+  .scrollbar-thin {
+    scrollbar-width: none;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Infinite Scroll Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-33.333%));
+  }
+}
+
+.animate-scroll {
+  animation: scroll var(--animation-duration, 25s) linear infinite
+    var(--animation-direction, forwards);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 100s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+/* Fast marquee for LogoTicker only */
+.logo-ticker-track {
+  animation: marquee 20s linear infinite;
+}
+
+/* Pause on hover */
+.marquee-container:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+/* ===== Accessibility: Underline all text ===== */
+body.accessibility-underline,
+body.accessibility-underline * {
+  text-decoration: underline;
+}
+
+/* ===== Accessibility: High Contrast Mode ===== */
+
+/*
+ * Strategy: Override CSS variables first, then aggressively catch ALL
+ * background colors via attribute selectors ([class*="bg-..."]), inline
+ * style selectors ([style*="background"]), and element selectors.
+ * Layered dark surfaces: body #0d0d0d → surfaces #161616 → elevated #1e1e1e
+ */
+
+/* 1 ── CSS Custom Properties Override ────────────────────────────────── */
+body.accessibility-high-contrast {
+  --background: 0 0% 5%;
+  --foreground: 0 0% 100%;
+  --card: 0 0% 9%;
+  --card-foreground: 0 0% 100%;
+  --popover: 0 0% 9%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 210 100% 55%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 0% 14%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 14%;
+  --muted-foreground: 0 0% 80%;
+  --accent: 0 0% 14%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 0 0% 30%;
+  --input: 0 0% 18%;
+  --ring: 210 100% 55%;
+
+  background-color: #0d0d0d !important;
+  color: #ffffff !important;
+}
+
+/* 2 ── Nuke ALL light/colored backgrounds ────────────────────────────── */
+
+/* Tailwind named color utilities — every palette */
+body.accessibility-high-contrast [class*="bg-white"],
+body.accessibility-high-contrast [class*="bg-black"],
+body.accessibility-high-contrast [class*="bg-gray-"],
+body.accessibility-high-contrast [class*="bg-slate-"],
+body.accessibility-high-contrast [class*="bg-zinc-"],
+body.accessibility-high-contrast [class*="bg-neutral-"],
+body.accessibility-high-contrast [class*="bg-stone-"],
+body.accessibility-high-contrast [class*="bg-red-"],
+body.accessibility-high-contrast [class*="bg-orange-"],
+body.accessibility-high-contrast [class*="bg-amber-"],
+body.accessibility-high-contrast [class*="bg-yellow-"],
+body.accessibility-high-contrast [class*="bg-lime-"],
+body.accessibility-high-contrast [class*="bg-green-"],
+body.accessibility-high-contrast [class*="bg-emerald-"],
+body.accessibility-high-contrast [class*="bg-teal-"],
+body.accessibility-high-contrast [class*="bg-cyan-"],
+body.accessibility-high-contrast [class*="bg-sky-"],
+body.accessibility-high-contrast [class*="bg-blue-"],
+body.accessibility-high-contrast [class*="bg-indigo-"],
+body.accessibility-high-contrast [class*="bg-violet-"],
+body.accessibility-high-contrast [class*="bg-purple-"],
+body.accessibility-high-contrast [class*="bg-fuchsia-"],
+body.accessibility-high-contrast [class*="bg-pink-"],
+body.accessibility-high-contrast [class*="bg-rose-"] {
+  background-color: #161616 !important;
+  background-image: none !important;
+}
+
+/* Arbitrary hex backgrounds — catches bg-[#F9F7F2], bg-[#B9DEEB], etc. */
+body.accessibility-high-contrast [class*="bg-\[#"] {
+  background-color: #161616 !important;
+  background-image: none !important;
+}
+
+/* Tailwind gradient utilities */
+body.accessibility-high-contrast [class*="bg-gradient"] {
+  background-image: none !important;
+  background-color: #161616 !important;
+}
+
+/* Inline style backgrounds (Hero radial-gradient, dynamic colors, etc.) */
+body.accessibility-high-contrast [style*="background"]:not(img):not(video):not(picture):not(iframe) {
+  background: #0d0d0d !important;
+}
+
+/* Custom CSS gradient classes */
+body.accessibility-high-contrast .custom-radial-gradient,
+body.accessibility-high-contrast .custom-radial-gradient-cdsco {
+  background: #0d0d0d !important;
+}
+
+/* Structural elements — dark base */
+body.accessibility-high-contrast section,
+body.accessibility-high-contrast footer,
+body.accessibility-high-contrast header,
+body.accessibility-high-contrast nav,
+body.accessibility-high-contrast main,
+body.accessibility-high-contrast article,
+body.accessibility-high-contrast aside {
+  background-color: #0d0d0d !important;
+  background-image: none !important;
+}
+
+/* 3 ── Restore surfaces that need visible backgrounds ────────────────── */
+
+/* TopBar — branded but darker */
+body.accessibility-high-contrast .bg-\[\#0A4394\] {
+  background-color: #06285a !important;
+  background-image: none !important;
+}
+
+/* Dropdowns, popovers, dialogs, toasts — elevated surface */
+body.accessibility-high-contrast [data-radix-popper-content-wrapper],
+body.accessibility-high-contrast [data-radix-popper-content-wrapper] > *,
+body.accessibility-high-contrast [role="dialog"],
+body.accessibility-high-contrast [role="menu"],
+body.accessibility-high-contrast [role="listbox"],
+body.accessibility-high-contrast [data-sonner-toast] {
+  background-color: #1e1e1e !important;
+}
+
+/* Buttons — slightly elevated so they're tappable-looking */
+body.accessibility-high-contrast button,
+body.accessibility-high-contrast [role="button"] {
+  background-color: #1f1f1f !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+body.accessibility-high-contrast button:hover,
+body.accessibility-high-contrast [role="button"]:hover {
+  background-color: #2a2a2a !important;
+}
+
+/* Inputs & form elements */
+body.accessibility-high-contrast input,
+body.accessibility-high-contrast textarea,
+body.accessibility-high-contrast select {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+body.accessibility-high-contrast input::placeholder,
+body.accessibility-high-contrast textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Table headers */
+body.accessibility-high-contrast th {
+  background-color: #1a1a1a !important;
+}
+
+/* 4 ── Text Colors ──────────────────────────────────────────────────── */
+
+/* Headings — pure white */
+body.accessibility-high-contrast h1,
+body.accessibility-high-contrast h2,
+body.accessibility-high-contrast h3,
+body.accessibility-high-contrast h4,
+body.accessibility-high-contrast h5,
+body.accessibility-high-contrast h6 {
+  color: #ffffff !important;
+}
+
+/* Body text — slightly off-white for comfortable reading */
+body.accessibility-high-contrast p,
+body.accessibility-high-contrast span,
+body.accessibility-high-contrast li,
+body.accessibility-high-contrast td,
+body.accessibility-high-contrast th,
+body.accessibility-high-contrast label,
+body.accessibility-high-contrast div {
+  color: #f0f0f0 !important;
+}
+
+/* Links — bright cyan for instant visibility */
+body.accessibility-high-contrast a {
+  color: #5cc8ff !important;
+}
+
+body.accessibility-high-contrast a:hover {
+  color: #90dbff !important;
+}
+
+/* 5 ── Borders ──────────────────────────────────────────────────────── */
+body.accessibility-high-contrast [class*="border"],
+body.accessibility-high-contrast hr {
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+body.accessibility-high-contrast .h-px,
+body.accessibility-high-contrast .w-px,
+body.accessibility-high-contrast [class*="divide-"] > * + * {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* 6 ── Images & Media — untouched, sharp, clearly visible ───────────── */
+body.accessibility-high-contrast img,
+body.accessibility-high-contrast picture,
+body.accessibility-high-contrast video {
+  filter: contrast(1.05) brightness(1.02) !important;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+/* SVG icons inherit parent text color */
+body.accessibility-high-contrast svg {
+  color: inherit !important;
+}
+
+/* 7 ── Focus Outlines — highly visible for keyboard nav ─────────────── */
+body.accessibility-high-contrast *:focus-visible {
+  outline: 2px solid #5cc8ff !important;
+  outline-offset: 2px !important;
+}
+
+/* 8 ── Scrollbar ────────────────────────────────────────────────────── */
+body.accessibility-high-contrast *::-webkit-scrollbar-track {
+  background: #0d0d0d !important;
+}
+
+body.accessibility-high-contrast *::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* 9 ── Box-shadow Buttons ───────────────────────────────────────────── */
+body.accessibility-high-contrast .boxshadowbtn {
+  box-shadow: 10px 10px rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+body.accessibility-high-contrast .boxshadowbtn:hover {
+  box-shadow: none !important;
+}
+
+/* 10 ── Client Logo Container ───────────────────────────────────────── */
+body.accessibility-high-contrast .client-logo-container {
+  --c: rgba(255, 255, 255, 0.25);
+  outline-color: rgba(255, 255, 255, 0.25) !important;
+  background: #161616 !important;
+}
+
+body.accessibility-high-contrast .client-logo-container:hover {
+  outline-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* 11 ── Separators & Dividers ───────────────────────────────────────── */
+body.accessibility-high-contrast .service-left-content-divider {
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  ) !important;
+}
+
+body.accessibility-high-contrast .service-left-content-separator {
+  background-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+/* 12 ── Autofill ────────────────────────────────────────────────────── */
+body.accessibility-high-contrast input:-webkit-autofill,
+body.accessibility-high-contrast input:-webkit-autofill:focus,
+body.accessibility-high-contrast input:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0 1000px #1a1a1a inset !important;
+  box-shadow: 0 0 0 1000px #1a1a1a inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+}
+
+/* 13 ── Phone Input (react-tel-input) ───────────────────────────────── */
+body.accessibility-high-contrast .react-tel-input .form-control {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+body.accessibility-high-contrast .react-tel-input .flag-dropdown {
+  background-color: #1f1f1f !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
+}
+
+body.accessibility-high-contrast .react-tel-input .selected-flag:hover,
+body.accessibility-high-contrast .react-tel-input .selected-flag:focus {
+  background-color: #2a2a2a !important;
 }
