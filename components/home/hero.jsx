@@ -1,5 +1,5 @@
-const HeroImage = "/hero-image/hero-image.webp";
-const HeroImageMobile = "/hero-image/hero-mobile.svg";
+const HeroImage = "/images/hero/hero-image.webp";
+const HeroImageMobile = "/images/hero/hero-mobile.svg";
 
 import Link from "next/link";
 

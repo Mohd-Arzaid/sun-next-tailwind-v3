@@ -1,13 +1,13 @@
-import AuditsMarquee from "@/home-page-sections/AuditsMarquee";
-import Contact from "@/home-page-sections/Contact";
-import Hero from "@/home-page-sections/Hero";
-import LogoTicker from "@/home-page-sections/LogoTicker";
-import OurServices from "@/home-page-sections/OurServices";
-import WebinarSeminarMarquee from "@/home-page-sections/WebinarSeminarMarquee";
-import LatestNews from "@/home-page-sections/LatestNews";
-import Countries from "@/home-page-sections/Countries";
-import CertificationAndAchievements from "@/home-page-sections/CertificationAndAchievements";
-import WhatsOurCustomersSaySection from "@/home-page-sections/WhatsOurCustomersSaySection";
+import AuditsMarquee from "@/components/home/audits-marquee";
+import Contact from "@/components/home/contact";
+import Hero from "@/components/home/hero";
+import LogoTicker from "@/components/home/logo-ticker";
+import OurServices from "@/components/home/our-services";
+import WebinarSeminarMarquee from "@/components/home/webinar-seminar-marquee";
+import LatestNews from "@/components/home/latest-news";
+import Countries from "@/components/home/countries";
+import CertificationAndAchievements from "@/components/home/certification-and-achievements";
+import WhatsOurCustomersSaySection from "@/components/home/whats-our-customers-say-section";
 
 export default function Home() {
   return (

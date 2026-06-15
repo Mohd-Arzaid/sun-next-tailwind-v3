@@ -39,7 +39,7 @@ const ServicesEng = () => {
             <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2">
               <div className={imageCircleClass}>
                 <img
-                  src="/services-images/BIS.jpg"
+                  src="/images/services/bis.jpg"
                   alt="BIS Logo"
                   title="BIS Logo"
                   className={imageClass}
@@ -58,7 +58,7 @@ const ServicesEng = () => {
             <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2">
               <div className={imageCircleClass}>
                 <img
-                  src="/services-images/CDSCO.jpg"
+                  src="/images/services/cdsco.jpg"
                   alt="CDSCO Logo"
                   title="CDSCO Logo"
                   className={imageClass}
@@ -77,7 +77,7 @@ const ServicesEng = () => {
             <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2">
               <div className={imageCircleClass}>
                 <img
-                  src="/services-images/BISCRS.jpg"
+                  src="/images/services/biscrs.jpg"
                   alt="BISCRS Logo"
                   title="BISCRS Logo"
                   className={imageClass}
@@ -96,7 +96,7 @@ const ServicesEng = () => {
             <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2">
               <div className={imageCircleClass}>
                 <img
-                  src="/services-images/PlasticWasteManagement.jpg"
+                  src="/images/services/plastic-waste-management.jpg"
                   alt="Plastic Waste Management Logo"
                   title="Plastic Waste Management Logo"
                   className={imageClass}
@@ -115,7 +115,7 @@ const ServicesEng = () => {
             <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2">
               <div className={imageCircleClass}>
                 <img
-                  src="/services-images/EPRCertificate.jpg"
+                  src="/images/services/epr-certificate.jpg"
                   alt="EPR Certificate Logo"
                   title="EPR Certificate Logo"
                   className={imageClass}
@@ -134,7 +134,7 @@ const ServicesEng = () => {
             <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2">
               <div className={imageCircleClass}>
                 <img
-                  src="/services-images/LMPC.jpg"
+                  src="/images/services/lmpc.jpg"
                   alt="LMPC Logo"
                   title="LMPC Logo"
                   className={imageClass}
@@ -153,7 +153,7 @@ const ServicesEng = () => {
             <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2">
               <div className={imageCircleClass}>
                 <img
-                  src="/services-images/BIS.jpg"
+                  src="/images/services/bis.jpg"
                   alt="BIS Logo"
                   title="BIS Logo"
                   className={imageClass}
@@ -172,7 +172,7 @@ const ServicesEng = () => {
             <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2">
               <div className={imageCircleClass}>
                 <img
-                  src="/services-images/ISIMark.jpg"
+                  src="/images/services/isi-mark.jpg"
                   alt="ISI Mark Logo"
                   title="ISI Mark Logo"
                   className={imageClass}

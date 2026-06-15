@@ -3,112 +3,112 @@ const AuditsMarquee = ({ className = "bg-white pt-8" }) => {
   const galleryImages = [
     {
       id: 1,
-      image: "/auditImages/Bahrain.webp",
+      image: "/images/audits/bahrain.webp",
       title: "Bahrain Audit",
       description:
         "Successful Audit and Grant of BIS License on Aluminium Products under IS 617 and 2590 for one of the world's leading manufacturer in Bahrain",
     },
     {
       id: 2,
-      image: "/auditImages/Vietnam.webp",
+      image: "/images/audits/vietnam.webp",
       title: "Vietnam Audit",
       description:
         "Successful Audit and Grant of BIS License on Toys under IS 9873 for one of the world's leading manufacturer in Vietnam",
     },
     {
       id: 3,
-      image: "/auditImages/Indonesia.webp",
+      image: "/images/audits/indonesia.webp",
       title: "Indonesia Audit",
       description:
         "Successful Audit and Grant of BIS License on Toys under IS 9873 for one of the world's leading manufacturer in Indonesia",
     },
     {
       id: 4,
-      image: "/auditImages/Vietnam-2.webp",
+      image: "/images/audits/vietnam-2.webp",
       title: "Vietnam Audit",
       description:
         "Successful Audit and Grant of BIS License on Toys under IS 9873 for one of the world's leading manufacturer in Vietnam",
     },
     {
       id: 5,
-      image: "/auditImages/Italy-2.webp",
+      image: "/images/audits/italy-2.webp",
       title: "Italy Audit",
       description:
         "Successful Audit and Grant of BIS License on Footwear under IS 6721 for one of the world's leading manufacturer in Italy",
     },
     {
       id: 6,
-      image: "/auditImages/Vietnam-3.webp",
+      image: "/images/audits/vietnam-3.webp",
       title: "Vietnam Audit",
       description:
         "Successful Audit and Grant of BIS License on Sewing Machines under IS 15449 for one of the world's leading manufacturer in Vietnam",
     },
     {
       id: 7,
-      image: "/auditImages/Malaysia.webp",
+      image: "/images/audits/malaysia.webp",
       title: "Malaysia Audit",
       description:
         "Successful Audit and Grant of BIS License on Toys under IS 9873 for one of the world's leading manufacturer in Malaysia",
     },
     {
       id: 8,
-      image: "/auditImages/Slovenia.webp",
+      image: "/images/audits/slovenia.webp",
       title: "Slovenia Audit",
       description:
         "Successful Audit and Grant of BIS License on Hinges under IS 18297 for one of the world's leading manufacturer in Slovenia",
     },
     {
       id: 9,
-      image: "/auditImages/Vietnam-4.webp",
+      image: "/images/audits/vietnam-4.webp",
       title: "Vietnam Audit",
       description:
         "Successful Audit and Grant of BIS License on Steel Products under IS 6911 for one of the world's leading manufacturer in Vietnam",
     },
     {
       id: 10,
-      image: "/auditImages/Thailand.webp",
+      image: "/images/audits/thailand.webp",
       title: "Thailand Audit",
       description:
         "Successful Audit and Grant of BIS License on Toys under IS 9873 for one of the world's leading manufacturer in Thailand",
     },
     {
       id: 11,
-      image: "/auditImages/USA.webp",
+      image: "/images/audits/usa.webp",
       title: "USA Audit",
       description:
         "Successful Audit and Grant of BIS License on Steel Products under IS 6911 for one of the world's leading manufacturer in USA",
     },
     {
       id: 12,
-      image: "/auditImages/Spain.webp",
+      image: "/images/audits/spain.webp",
       title: "Spain Audit",
       description:
         "Successful Audit and Grant of BIS License on Aluminium Products under IS 1285 and IS 733 for one of the world's leading manufacturer in Spain",
     },
     {
       id: 13,
-      image: "/auditImages/Turkey.webp",
+      image: "/images/audits/turkey.webp",
       title: "Turkey Audit",
       description:
         "Successful Audit and Grant of BIS License on Footwear under IS 6721 and IS 17043 Part 2 for one of the world's leading manufacturer in Turkey",
     },
     {
       id: 14,
-      image: "/auditImages/bis-certification-inspection-malaysia.webp",
+      image: "/images/audits/bis-certification-inspection-malaysia.webp",
       title: "Malaysia Audit",
       description:
         "Successful Audit and Grant of BIS License on Measuring Tape under IS 1269 Part 2 for one of the world's leading manufacturer in Malaysia",
     },
     {
       id: 17,
-      image: "/auditImages/Bahrain-2.webp",
+      image: "/images/audits/bahrain-2.webp",
       title: "Bahrain Audit",
       description:
         "Successful Audit and Grant of BIS License on Aluminium Products under IS 733 , IS 5082 , IS 5484 and IS 398 Part 6 for one of the world's leading manufacturer in Bahrain.",
     },
     {
       id: 18,
-      image: "/auditImages/Malaysia-2.webp",
+      image: "/images/audits/malaysia-2.webp",
       title: "Vietnam Audit",
       description:
         "Successful Audit and Grant of BIS License on Sewing Machines under IS 15449 for one of the world's leading manufacturer in Vietnam.",

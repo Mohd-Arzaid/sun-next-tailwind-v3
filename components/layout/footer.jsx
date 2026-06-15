@@ -112,7 +112,7 @@ const Footer = () => {
                  text-2xl font-bold text-center text-neutral-600"
               >
                 <img
-                  src="/company-logo/company-logo.webp"
+                  src="/images/company/company-logo.webp"
                   alt="Sun Certifications India logo"
                   title="Sun Certifications India logo"
                   className="hidden md:block w-10 h-10 md:w-12 md:h-12"

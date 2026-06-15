@@ -23,15 +23,15 @@ import {
   TableHead,
 } from "@/components/ui/table";
 import { Check, SlashIcon } from "lucide-react";
-import ServicesRightSideContentEng from "@/components/manual/ServicesRightSideContent/ServicesRightSideContentEng";
-import ServiceAuthorEng from "@/components/manual/ServiceAuthor/ServiceAuthorEng";
+import ServicesRightSideContentEng from "@/components/services/services-right-side-content-eng";
+import ServiceAuthorEng from "@/components/services/service-author-eng";
 import {
   Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import ServicesEng from "@/components/manual/Services/ServicesEng";
+import ServicesEng from "@/components/services/services-eng";
 
 function BISFM() {
   return (
@@ -498,7 +498,7 @@ const MainContentLeft = () => {
 
           <div className="flex justify-center mt-[20px] md:mt-[26px]">
             <img
-              src="/bisfm-service-page-images/BISCertificationforForeignManufacaturers.webp"
+              src="/images/bisfm/bis-certification-for-foreign-manufacturers.webp"
               alt="BIS Certification for Foreign Manufacturers"
               title="BIS Certification for Foreign Manufacturers"
               className="max-w-full h-auto rounded-lg shadow-md"
@@ -770,7 +770,7 @@ const StandardizationSection = () => {
       />
 
       <img
-        src="/bisfm-service-page-images/ISIMARKUpdated.jpg"
+        src="/images/bisfm/isimark-updated.jpg"
         alt="ISI Mark logo"
         title="ISI Mark logo"
         className="w-full max-w-[300px] h-auto rounded-lg shadow-sm my-6 mx-auto border border-gray-200 hover:shadow-md transition-shadow duration-300"
@@ -1506,7 +1506,7 @@ const ProcessSection = () => {
       </h3>
 
       <img
-        src="/bisfm-service-page-images/biscertificate.png"
+        src="/images/bisfm/bis-certificate.png"
         alt="Sample of BIS certificate for FMCS"
         title="Sample of BIS certificate for FMCS"
         className="w-full h-auto rounded-lg shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300 my-8 mx-auto"

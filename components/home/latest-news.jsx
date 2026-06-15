@@ -2,8 +2,8 @@
 
 import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
-import { notifications } from "@/data/notificationsData";
-import { getNotificationDetailUrl } from "@/app/utils/urlUtils";
+import { notifications } from "@/data/notifications-data";
+import { getNotificationDetailUrl } from "@/lib/url-utils";
 
 const LatestNews = () => {
   const [duplicatedNotifications, setDuplicatedNotifications] = useState([]);

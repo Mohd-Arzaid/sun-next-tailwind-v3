@@ -6,7 +6,7 @@ const CertificationAndAchievements = () => {
     {
       id: 1,
       image:
-        "/home-page-certificate-img/Sun-Certifications-India-ISO-20000-page-0001.jpg",
+        "/images/home/certificates/sun-certifications-india-iso-20000-page-0001.jpg",
       title: "ISO 20000 Certification",
       altText:
         "ISO Certificate of Sun Certifications India for information technology - service management - ISO 20000",
@@ -14,7 +14,7 @@ const CertificationAndAchievements = () => {
     {
       id: 2,
       image:
-        "/home-page-certificate-img/Sun-Certifications-India-ISO-10002-page-0001.jpg",
+        "/images/home/certificates/sun-certifications-india-iso-10002-page-0001.jpg",
       title: "ISO 10002 Certification",
       altText:
         "ISO Certificate of Sun Certifications India for Customer Satisfaction for complaints handling in organization - ISO 10002:2018",
@@ -22,7 +22,7 @@ const CertificationAndAchievements = () => {
     {
       id: 3,
       image:
-        "/home-page-certificate-img/Sun-Certifications-India-ISO-9001-page-0001.jpg",
+        "/images/home/certificates/sun-certifications-india-iso-9001-page-0001.jpg",
       title: "ISO 9001 Certification",
       altText:
         "ISO Certificate of Sun Certifications India for the quality managment system ISO 9001",
@@ -30,7 +30,7 @@ const CertificationAndAchievements = () => {
     {
       id: 4,
       image:
-        "/home-page-certificate-img/Sun-Certifications-India-ISO-27001-page-0001.jpg",
+        "/images/home/certificates/sun-certifications-india-iso-27001-page-0001.jpg",
       title: "ISO 27001 Certification",
       altText:
         "ISO Certificate of Sun Certifications India for the information security management system - ISO 27001:2022",

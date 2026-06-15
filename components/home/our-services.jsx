@@ -10,7 +10,7 @@ const services = [
     title: "BIS Mark (ISI License) for Foreign Manufacturers",
     description:
       "Comprehensive ISI licensing solution for foreign manufacturers looking to enter the Indian market with quality-certified products.",
-    image: "/services-images/BIS.jpg",
+    image: "/images/services/bis.jpg",
     path: "/a-guide-to-bis-certification-for-foreign-manufacturers-indian-bis",
   },
   {
@@ -18,7 +18,7 @@ const services = [
     title: "Scheme X",
     description:
       "Specialized certification program for specific product categories requiring compliance with advanced quality and safety standards.",
-    image: "/services-images/BISCRS.jpg",
+    image: "/images/services/biscrs.jpg",
     path: "/indian-bis-certification-under-scheme-x",
   },
   {
@@ -26,7 +26,7 @@ const services = [
     title: "ISI Mark BIS for Indian Manufacturers",
     description:
       "Domestic certification for Indian manufacturers ensuring products meet Bureau of Indian Standards quality and safety requirements.",
-    image: "/services-images/ISIMark.jpg",
+    image: "/images/services/isi-mark.jpg",
     path: "/a-guide-to-bis-certification-indian-bis",
   },
   {
@@ -34,7 +34,7 @@ const services = [
     title: "BIS CRS Registration",
     description:
       "Compulsory Registration Scheme certification for electronic and IT products ensuring safety and quality compliance.",
-    image: "/services-images/BISCRS.jpg",
+    image: "/images/services/biscrs.jpg",
     path: "/what-is-crs-bis-or-crs-registration",
   },
   {
@@ -42,7 +42,7 @@ const services = [
     title: "CDSCO Registration Certification",
     description:
       "Central Drugs Standard Control Organization approval for medical devices and pharmaceuticals in India.",
-    image: "/services-images/CDSCO.jpg",
+    image: "/images/services/cdsco.jpg",
     path: "/cdsco-registration-certification",
   },
   {
@@ -50,7 +50,7 @@ const services = [
     title: "Plastic Waste Management",
     description:
       "Comprehensive solutions for plastic waste management compliance, helping businesses meet environmental regulations.",
-    image: "/services-images/PlasticWasteManagement.jpg",
+    image: "/images/services/plastic-waste-management.jpg",
     path: "/epr-certificate-for-plastic-waste-management-pwm",
   },
   {
@@ -58,7 +58,7 @@ const services = [
     title: "EPR Certificate",
     description:
       "Extended Producer Responsibility certification for sustainable waste management and environmental compliance.",
-    image: "/services-images/EPRCertificate.jpg",
+    image: "/images/services/epr-certificate.jpg",
     path: "/a-guide-on-how-to-obtain-epr-certificate",
   },
   {
@@ -66,7 +66,7 @@ const services = [
     title: "LMPC Certificate",
     description:
       "Legal Metrology Packaged Commodities certification ensuring accurate measurement and proper labeling of packaged goods.",
-    image: "/services-images/LMPC.jpg",
+    image: "/images/services/lmpc.jpg",
     path: "/a-guide-on-how-to-obtain-lmpc-certificate",
   },
 ];

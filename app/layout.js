@@ -6,9 +6,9 @@ import {
   Roboto,
 } from "next/font/google";
 import "./globals.css";
-import Footer from "./common/Footer";
-import Navbar from "./common/Navbar";
-import TopBar from "./common/TopBar";
+import Footer from "@/components/layout/footer";
+import Navbar from "@/components/layout/navbar";
+import TopBar from "@/components/layout/top-bar";
 
 const geist = Geist({
   variable: "--font-geist-sans",

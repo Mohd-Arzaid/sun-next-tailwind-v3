@@ -23,15 +23,15 @@ import {
   TableHead,
 } from "@/components/ui/table";
 import { Check, SlashIcon } from "lucide-react";
-import ServicesRightSideContentEng from "@/components/manual/ServicesRightSideContent/ServicesRightSideContentEng";
-import ServiceAuthorEng from "@/components/manual/ServiceAuthor/ServiceAuthorEng";
+import ServicesRightSideContentEng from "@/components/services/services-right-side-content-eng";
+import ServiceAuthorEng from "@/components/services/service-author-eng";
 import {
   Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import ServicesEng from "@/components/manual/Services/ServicesEng";
+import ServicesEng from "@/components/services/services-eng";
 
 function ISIMark() {
   return (
@@ -509,7 +509,7 @@ const OverviewSection = () => {
       </h1>
       <div className="flex justify-center mt-[20px] md:mt-[26px]">
         <img
-          src="/isi-mark-service-page-images/bis-certification-for-indian-manufacturers.webp"
+          src="/images/isi-mark/bis-certification-for-indian-manufacturers.webp"
           alt="ISI Mark Certification"
           title="ISI Mark Certification "
           className="max-w-full h-auto rounded-lg shadow-md"

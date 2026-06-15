@@ -79,7 +79,7 @@ const Contact = () => {
 
         <div className="hidden md:block relative w-[600px] h-[539px] mr-5 mt-16">
           <img
-            src="/home-contact-image/ContactUs.webp"
+            src="/images/home/contact/contact-us.webp"
             alt="Home Page Contact Us Image"
             title="Home Page Contact Us Image"
             className="absolute right-0 w-[475.99px] h-[539px] object-cover"
@@ -91,7 +91,7 @@ const Contact = () => {
           />
 
           <img
-            src="/home-contact-image/ContactChild.webp"
+            src="/images/home/contact/contact-child.webp"
             alt="Home Page Contact Child Image"
             title="Home Page Contact Child Image"
             className="absolute inset-0 w-[350px] h-[350px] -translate-x-[70px] translate-y-[180px] object-cover"

@@ -17,7 +17,7 @@ import {
   Lightbulb,
   BarChart,
 } from "lucide-react";
-import { Button } from "../../ui/button";
+import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import Link from "next/link";
 import { Marquee } from "@/components/ui/marquee";

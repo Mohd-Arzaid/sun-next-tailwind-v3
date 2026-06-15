@@ -1,7 +1,7 @@
 const COMPANY_LOGOS = [
   {
     name: "Honeywell",
-    src: "/client-logos/honeywell.svg",
+    src: "/images/clients/honeywell.svg",
     height: 37,
     width: 160,
     alt: "Honeywell Company Logo - Trusted Partner",
@@ -9,7 +9,7 @@ const COMPANY_LOGOS = [
   },
   {
     name: "IKEA",
-    src: "/client-logos/ikea.svg",
+    src: "/images/clients/ikea.svg",
     height: 30,
     width: 160,
     alt: "IKEA Company Logo - Trusted Partner",
@@ -17,7 +17,7 @@ const COMPANY_LOGOS = [
   },
   {
     name: "Panasonic",
-    src: "/client-logos/panasonic.svg",
+    src: "/images/clients/panasonic.svg",
     height: 26,
     width: 160,
     alt: "Panasonic Company Logo - Trusted Partner",
@@ -25,7 +25,7 @@ const COMPANY_LOGOS = [
   },
   {
     name: "Ansell",
-    src: "/client-logos/ansell.svg",
+    src: "/images/clients/ansell.svg",
     height: 26,
     width: 160,
     alt: "Ansell Company Logo - Trusted Partner",
@@ -33,7 +33,7 @@ const COMPANY_LOGOS = [
   },
   {
     name: "Ametek",
-    src: "/client-logos/ametek.svg",
+    src: "/images/clients/ametek.svg",
     height: 23.5,
     width: 160,
     alt: "Ametek Company Logo - Trusted Partner",
@@ -41,7 +41,7 @@ const COMPANY_LOGOS = [
   },
   {
     name: "Bosch",
-    src: "/client-logos/bosch.svg",
+    src: "/images/clients/bosch.svg",
     height: 32,
     width: 160,
     alt: "Bosch Company Logo - Trusted Partner",
