@@ -6,8 +6,6 @@ module.exports = {
     "./pages/**/*.{js,jsx,ts,tsx,mdx}",
     "./components/**/*.{js,jsx,ts,tsx,mdx}",
     "./src/**/*.{js,jsx,ts,tsx,mdx}",
-    "./home-page-sections/**/*.{js,jsx,ts,tsx,mdx}",
-    "./services-pages/**/*.{js,jsx,ts,tsx,mdx}",
   ],
   theme: {
     extend: {
