@@ -23,6 +23,7 @@ import {
 } from "@/components/ui/table";
 import { Check, SlashIcon } from "lucide-react";
 import ServicesRightSideContentEng from "@/components/manual/ServicesRightSideContent/ServicesRightSideContentEng";
+import ServiceAuthorEng from "@/components/manual/ServiceAuthor/ServiceAuthorEng";
 
 function BISFM() {
   return (
@@ -539,7 +540,7 @@ const MainContentLeft = () => {
         <SurveillanceSection />
         <div className="service-left-content-divider" />
         <FacilitatorSection />
-        {/* <ServiceAuthorEng /> */}
+        <ServiceAuthorEng />
       </div>
     </div>
   );
