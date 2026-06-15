@@ -42,14 +42,15 @@ const roboto = Roboto({
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${geist.variable} ${inter.variable} ${playfair.variable} ${poppins.variable} ${roboto.variable}`}
-    >
-      <TopBar/>
-      <Navbar />
-      <body>{children}</body>
-      <Footer />
+    <html lang="en">
+      <body
+        className={`${geist.variable} ${inter.variable} ${playfair.variable} ${poppins.variable} ${roboto.variable}`}
+      >
+        <TopBar />
+        <Navbar />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
