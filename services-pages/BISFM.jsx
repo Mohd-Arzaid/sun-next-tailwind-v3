@@ -25,7 +25,13 @@ import {
 import { Check, SlashIcon } from "lucide-react";
 import ServicesRightSideContentEng from "@/components/manual/ServicesRightSideContent/ServicesRightSideContentEng";
 import ServiceAuthorEng from "@/components/manual/ServiceAuthor/ServiceAuthorEng";
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionTrigger,
+  AccordionContent,
+} from "@/components/ui/accordion";
+import ServicesEng from "@/components/manual/Services/ServicesEng";
 
 function BISFM() {
   return (
@@ -36,6 +42,7 @@ function BISFM() {
       <MainContent />
       <ServiceFaq />
       <LanguageSelector />
+      <ServicesEng />
     </div>
   );
 }
@@ -1759,7 +1766,6 @@ const FacilitatorSection = () => {
   );
 };
 
-
 const ServiceFaq = () => {
   const faqs = [
     {
@@ -1881,7 +1887,6 @@ const ServiceFaq = () => {
     </section>
   );
 };
-
 
 const LanguageSelector = () => {
   const currentPath = usePathname();
@@ -2041,7 +2046,6 @@ const LanguageSelector = () => {
     </div>
   );
 };
-
 
 const PointsListWithoutHeading = ({ points }) => {
   return (
