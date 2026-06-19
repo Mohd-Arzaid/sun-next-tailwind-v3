@@ -11,7 +11,7 @@ import {
 const joinClasses = (...classes) => classes.filter(Boolean).join(" ");
 
 const HEADING_TWO_CLASSES =
-  "text-[28px] md:text-[40px] font-roboto font-bold text-[#131316] leading-none md:leading-[1.1] my-3";
+  "text-[28px] md:text-[40px] font-roboto font-bold text-[#131316] leading-none md:leading-[1.1] my-3 md:my-0";
 
 const HEADING_THREE_CLASSES =
   "mt-[12px] md:mt-[16px] font-semibold font-geist text-[16px] md:text-[20px] text-[#131316]";
