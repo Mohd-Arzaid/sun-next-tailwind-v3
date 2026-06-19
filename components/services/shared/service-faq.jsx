@@ -10,7 +10,7 @@ import {
 const ServiceFaq = ({ faqs }) => (
   <section
     id="faqs"
-    className="my-2  scroll-mt-20"
+    className="my-2  scroll-mt-28"
     aria-label="Frequently Asked Questions"
   >
     <div className="max-w-[88rem] mx-auto px-4 py-8 md:p-12">
