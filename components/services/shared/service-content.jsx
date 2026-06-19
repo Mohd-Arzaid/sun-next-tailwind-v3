@@ -11,7 +11,7 @@ import {
 const joinClasses = (...classes) => classes.filter(Boolean).join(" ");
 
 const HEADING_TWO_CLASSES =
-  "text-[28px] md:text-[40px] font-roboto font-bold text-[#131316] leading-none md:leading-[1.1] my-3 md:my-0";
+  "text-[28px] md:text-[40px] font-roboto font-bold text-[#131316] leading-none md:leading-[1.1] my-3";
 
 const HEADING_THREE_CLASSES =
   "mt-[12px] md:mt-[16px] font-semibold font-geist text-[16px] md:text-[20px] text-[#131316]";
@@ -65,7 +65,7 @@ export const ServiceImage = ({ src, alt, title, className = "" }) => (
 // By default only non-last columns are emphasized (matches key/value tables);
 // pass `emphasizeAllColumns` to emphasize every column (matches comparison tables).
 export const ServiceTable = ({ headers, rows, emphasizeAllColumns = false }) => (
-  <div className="mt-6 md:mt-8 overflow-x-auto">
+  <div className="my-6 md:my-8 overflow-x-auto">
     <Table className="min-w-full border border-gray-200 rounded-lg overflow-hidden">
       <TableHeader>
         <TableRow className="bg-[#F9F7F2] hover:bg-[#F9F7F2]/80">
