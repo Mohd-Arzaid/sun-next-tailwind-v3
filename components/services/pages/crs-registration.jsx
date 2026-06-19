@@ -117,7 +117,7 @@ const HeroSection = () => {
             <div
               className="flex items-center cursor-pointer group"
               onClick={() => {
-                const servicesSection = document.getElementById("services");
+                const servicesSection = document.getElementById("our-services");
                 if (servicesSection) {
                   servicesSection.scrollIntoView({
                     behavior: "smooth",

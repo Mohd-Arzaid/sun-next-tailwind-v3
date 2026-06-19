@@ -3,7 +3,7 @@
 import ServiceHeroContactForm from "@/components/services/shared/service-hero-contact-form";
 
 const scrollToServices = () => {
-  const servicesSection = document.getElementById("services");
+  const servicesSection = document.getElementById("our-services");
   if (servicesSection) {
     servicesSection.scrollIntoView({ behavior: "smooth", block: "start" });
   }

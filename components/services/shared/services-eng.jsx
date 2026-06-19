@@ -16,7 +16,7 @@ const ServicesEng = () => {
       <div className="max-w-[80rem] w-full mx-auto">
         <div className="flex flex-col items-center justify-center">
           <h2
-            id="services"
+            id="our-services"
             className={`text-[32px] md:text-[48px] text-center font-medium text-neutral-800 scroll-mt-[92px] md:scroll-mt-[136px] ${interFont}`}
           >
             Our Services
