@@ -6,18 +6,6 @@
   @apply shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)];
 }
 
-.service-left-content-heading-two {
-  @apply text-[28px] md:text-[40px] font-roboto font-bold text-[#131316] leading-none md:leading-[1.1] my-3 md:my-0;
-}
-
-.service-left-content-heading-three {
-  @apply mt-[12px] md:mt-[16px] font-semibold font-geist text-[16px] md:text-[20px] text-[#131316];
-}
-
-.service-left-content-paragraph {
-  @apply mt-[16px] md:mt-[18px] font-geist text-sm md:text-lg text-[#42434d] tracking-wide text-left max-w-full leading-loose;
-}
-
 .service-left-content-separator {
   @apply w-[94.46px] h-[1.5px] bg-gray-700;
 }
