@@ -23,15 +23,15 @@ import {
   TableHead,
 } from "@/components/ui/table";
 import { Check, SlashIcon } from "lucide-react";
-import ServicesRightSideContentEng from "@/components/services/services-right-side-content-eng";
-import ServiceAuthorEng from "@/components/services/service-author-eng";
+import ServicesRightSideContentEng from "@/components/services/shared/services-right-side-content-eng";
+import ServiceAuthorEng from "@/components/services/shared/service-author-eng";
 import {
   Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import ServicesEng from "@/components/services/services-eng";
+import ServicesEng from "@/components/services/shared/services-eng";
 
 function EPRService() {
   return (
@@ -110,7 +110,8 @@ const HeroSection = () => {
           </div>
 
           <p className="font-poppins text-[18px] md:text-[20px] z-[10] leading-[1.6] md:leading-[40px] text-[#332156] max-w-[490px] -mt-2">
-            Get EPR registration for e-waste management. Ensure CPCB compliance under E-Waste Management Rules, 2022
+            Get EPR registration for e-waste management. Ensure CPCB compliance
+            under E-Waste Management Rules, 2022
           </p>
 
           <div className="flex items-center -mt-2">
@@ -271,13 +272,7 @@ const IndexSection = () => {
 
   // Update section slugs and text content per reference
   const SECTIONS = useMemo(
-    () => [
-      "overview",
-      "eligibility",
-      "documents",
-      "consultancy",
-      "faqs",
-    ],
+    () => ["overview", "eligibility", "documents", "consultancy", "faqs"],
     []
   );
 
@@ -500,7 +495,7 @@ const MainContentLeft = () => {
         <ConsultingSection />
         <div className="service-left-content-divider" />
         <ReviewSection />
-    
+
         <ServiceAuthorEng />
       </div>
     </div>
@@ -1105,7 +1100,6 @@ const ReviewSection = () => {
     </section>
   );
 };
-
 
 const ServiceFaq = () => {
   const faqs = [

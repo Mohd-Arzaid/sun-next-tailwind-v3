@@ -23,15 +23,15 @@ import {
   TableHead,
 } from "@/components/ui/table";
 import { Check, SlashIcon } from "lucide-react";
-import ServicesRightSideContentEng from "@/components/services/services-right-side-content-eng";
-import ServiceAuthorEng from "@/components/services/service-author-eng";
+import ServicesRightSideContentEng from "@/components/services/shared/services-right-side-content-eng";
+import ServiceAuthorEng from "@/components/services/shared/service-author-eng";
 import {
   Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import ServicesEng from "@/components/services/services-eng";
+import ServicesEng from "@/components/services/shared/services-eng";
 
 function SchemeX() {
   return (
@@ -508,7 +508,6 @@ const MainContentLeft = () => {
     </div>
   );
 };
-
 
 const SchemeXMainContentLeftConclusionSection = () => {
   return (
@@ -1661,7 +1660,6 @@ const SchemeXMainContentLeftOverviewSection = () => {
   );
 };
 
-
 const ServiceFaq = () => {
   const faqs = [
     {
@@ -1725,17 +1723,20 @@ const ServiceFaq = () => {
         "Yes. The Indian BIS can suspend or cancel a BIS licence or certificate under Scheme X if non-compliance is found during surveillance or if the product fails to meet required Indian Standards.",
     },
     {
-      question: "What is the difference between BIS license and BIS certificate under Scheme X?",
+      question:
+        "What is the difference between BIS license and BIS certificate under Scheme X?",
       answer:
         "A BIS license is typically issued to Indian manufacturers, while a BIS certificate of conformity (CoC) is often issued to foreign manufacturers or for specific cases. Both serve the same purpose—ensuring product compliance under Scheme X.",
     },
     {
-      question: "Is the ISI mark allowed for products certified under Scheme X?",
+      question:
+        "Is the ISI mark allowed for products certified under Scheme X?",
       answer:
         "No. Products under Scheme X do not carry the ISI mark. Instead, they display the BIS standard mark relevant to the certification scheme, as governed by the Indian BIS.",
     },
     {
-      question: "How do I know if my machinery requires Scheme X certification?",
+      question:
+        "How do I know if my machinery requires Scheme X certification?",
       answer:
         "Check the official list in the Omnibus Technical Regulation or consult with a BIS consultant to verify if your machinery falls under mandatory Scheme X certification requirements.",
     },

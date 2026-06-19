@@ -23,15 +23,15 @@ import {
   TableHead,
 } from "@/components/ui/table";
 import { Check, SlashIcon } from "lucide-react";
-import ServicesRightSideContentEng from "@/components/services/services-right-side-content-eng";
-import ServiceAuthorEng from "@/components/services/service-author-eng";
+import ServicesRightSideContentEng from "@/components/services/shared/services-right-side-content-eng";
+import ServiceAuthorEng from "@/components/services/shared/service-author-eng";
 import {
   Accordion,
   AccordionItem,
   AccordionTrigger,
   AccordionContent,
 } from "@/components/ui/accordion";
-import ServicesEng from "@/components/services/services-eng";
+import ServicesEng from "@/components/services/shared/services-eng";
 
 function CRSRegistration() {
   return (
