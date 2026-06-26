@@ -34,7 +34,7 @@ const ServiceHero = ({
       <div className="relative flex flex-col gap-6 md:gap-8 w-full md:w-[533px] items-start">
         <div className="inline-flex items-center">
           <div className="h-[3px] w-[40px] bg-[#1A8781] mr-4"></div>
-          <span className="text-[#1A8781] font-poppins text-sm font-medium tracking-wider uppercase">
+          <span className="text-[#1A8781] font-inter text-sm font-medium tracking-wider uppercase">
             {tagline}
           </span>
         </div>

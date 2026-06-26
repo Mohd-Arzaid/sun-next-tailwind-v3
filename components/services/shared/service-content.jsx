@@ -20,23 +20,23 @@ const PARAGRAPH_CLASSES =
   "mt-[16px] md:mt-[18px] font-geist text-sm md:text-lg text-[#42434d] tracking-wide text-left max-w-full leading-loose";
 
 export const SectionHeadingTwo = ({ children, className = "" }) => (
-  <h2 className={joinClasses(HEADING_TWO_CLASSES, className)}>
-    {children}
-  </h2>
+  <h2 className={joinClasses(HEADING_TWO_CLASSES, className)}>{children}</h2>
 );
 
 // Visually identical regardless of the underlying tag;
 // callers can pick the semantically correct element via `as`.
-export const SectionHeadingThree = ({ as: Tag = "h2", children, className = "" }) => (
+export const SectionHeadingThree = ({
+  as: Tag = "h2",
+  children,
+  className = "",
+}) => (
   <Tag className={joinClasses(HEADING_THREE_CLASSES, className)}>
     {children}
   </Tag>
 );
 
 export const Paragraph = ({ children, className = "" }) => (
-  <p className={joinClasses(PARAGRAPH_CLASSES, className)}>
-    {children}
-  </p>
+  <p className={joinClasses(PARAGRAPH_CLASSES, className)}>{children}</p>
 );
 
 export const PointsList = ({ points }) => (
@@ -64,7 +64,11 @@ export const ServiceImage = ({ src, alt, title, className = "" }) => (
 // `headers` is an array of header cells. `rows` is an array of row arrays.
 // By default only non-last columns are emphasized (matches key/value tables);
 // pass `emphasizeAllColumns` to emphasize every column (matches comparison tables).
-export const ServiceTable = ({ headers, rows, emphasizeAllColumns = false }) => (
+export const ServiceTable = ({
+  headers,
+  rows,
+  emphasizeAllColumns = false,
+}) => (
   <div className="my-6 md:my-8 overflow-x-auto">
     <Table className="min-w-full border border-gray-200 rounded-lg overflow-hidden">
       <TableHeader>
@@ -84,7 +88,10 @@ export const ServiceTable = ({ headers, rows, emphasizeAllColumns = false }) => 
       </TableHeader>
       <TableBody>
         {rows.map((row, rowIndex) => (
-          <TableRow key={rowIndex} className="hover:bg-gray-50 transition-colors">
+          <TableRow
+            key={rowIndex}
+            className="hover:bg-gray-50 transition-colors"
+          >
             {row.map((cell, cellIndex) => {
               const isLastColumn = cellIndex === row.length - 1;
               const isEmphasized = emphasizeAllColumns || !isLastColumn;
