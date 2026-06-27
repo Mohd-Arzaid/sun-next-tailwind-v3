@@ -8,6 +8,7 @@ const YouTubeFacade = ({
   videoId,
   title = "YouTube Video",
   isDuplicate = false,
+  playOnClick = true,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [shouldLoadThumbnail, setShouldLoadThumbnail] = useState(!isDuplicate);
@@ -84,17 +85,23 @@ const YouTubeFacade = ({
   return (
     <div
       ref={thumbnailRef}
-      className="relative aspect-video overflow-hidden rounded-xl group cursor-pointer bg-gray-200"
-      onClick={handleLoadVideo}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          handleLoadVideo();
-        }
-      }}
-      role="button"
-      tabIndex={0}
-      aria-label={`Play ${title} video`}
+      className={`relative aspect-video overflow-hidden rounded-xl group bg-gray-200 ${
+        playOnClick ? "cursor-pointer" : "pointer-events-none"
+      }`}
+      onClick={playOnClick ? handleLoadVideo : undefined}
+      onKeyDown={
+        playOnClick
+          ? (e) => {
+              if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                handleLoadVideo();
+              }
+            }
+          : undefined
+      }
+      role={playOnClick ? "button" : undefined}
+      tabIndex={playOnClick ? 0 : undefined}
+      aria-label={playOnClick ? `Play ${title} video` : undefined}
     >
       {thumbnailError ? (
         // Error state - Fallback UI

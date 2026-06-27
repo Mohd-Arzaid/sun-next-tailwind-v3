@@ -8,6 +8,7 @@ import LatestNews from "@/components/home/latest-news";
 import Countries from "@/components/home/countries";
 import CertificationAndAchievements from "@/components/home/certification-and-achievements";
 import WhatsOurCustomersSaySection from "@/components/home/whats-our-customers-say-section";
+import VideoSection from "@/components/home/video-section";
 
 export default function Home() {
   return (
@@ -23,7 +24,7 @@ export default function Home() {
       <CertificationAndAchievements />
       <WhatsOurCustomersSaySection />
       <LogoTicker />
-      {/*   <VideoSection /> */}
+      <VideoSection />
     </div>
   );
 }
